@@ -6,12 +6,12 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/user');
-require('/services/passport');
+require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
 
 const app = express();
-const { CLIENT_ORIGIN } = require('./config');
+const { CLIENT_ORIGIN } = require('./config/cors');
 
 // Express cors middleware 
 app.use(
@@ -34,7 +34,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/')(app);
+require('./routes/authRoutes')(app);
 
 // for heroku build processing
 
@@ -49,8 +49,12 @@ require('./routes/')(app);
 //   })
 // }
 
+app.get('/', (req, res) => {
+  res.send('home page');
+  console.log('rendered page successfully');
+})
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
