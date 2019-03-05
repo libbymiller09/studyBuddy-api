@@ -6,8 +6,10 @@ const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/user');
+require('./models/meetup');
 require('./services/passport');
 
+mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
 
 const app = express();
@@ -35,6 +37,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
+require('./routes/mapRoutes')(app);
+require('./routes/meetupRoutes')(app);
 
 // for heroku build processing
 
