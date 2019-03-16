@@ -11,6 +11,10 @@ module.exports= (app) => {
       res.send(meetups);
   });
 
+  // app.get('/meetups/new', (req, res) => {
+  //   res.send('meetups');
+  // })
+
   app.post('/meetups', requireLogin, async (req, res) => {
     const { subject, time, place } = req.body;
 
