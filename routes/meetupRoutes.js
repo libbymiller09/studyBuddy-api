@@ -11,24 +11,32 @@ module.exports= (app) => {
       res.send(meetups);
   });
 
-  // app.get('/meetups/new', (req, res) => {
-  //   res.send('meetups');
-  // })
-
-  app.post('/meetups', requireLogin, async (req, res) => {
+  app.post('/meetups', async (req, res) => {
     const { subject, time, place } = req.body;
 
     const meetup = new Meetup({
       subject,
       time,
       place,
-      _user: req.user.id
+      // _user: req.user.id
     });
     await meetup.save();
     res.send(meetup);
   });
 
-  app.delete('/meetups', requireLogin, async (req, res) => {
+  app.delete('/meetups/:id', requireLogin, async (req, res) => {
+    let id = req.params.id;
 
-  })
-};
+    if (!ObjectID.isValid(id)) {
+      return res.status(404).send();
+    }
+    Meetup.findByIdAndRemove(id).then((meetup) => {
+      if (!meetup) {
+        return res.status(404).send();
+      }
+      res.send({ meetup });
+    }).catch((e) => {
+      res.status(400).send();
+    });
+  });
+}
