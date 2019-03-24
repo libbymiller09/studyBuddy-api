@@ -12,6 +12,13 @@ module.exports= (app) => {
       res.send(meetups);
   });
 
+  app.get('/api/meetups/:id', async (req, res) => {
+    let id = req.params.id;
+    const meetups = await Meetup.findOne({id});
+    console.log(id);
+      res.send(meetups);
+  })
+
   app.post('/api/meetups', async (req, res) => {
     const { subject, time, place } = req.body;
 
@@ -27,10 +34,6 @@ module.exports= (app) => {
 
   app.delete('/api/meetups/:id', async (req, res) => {
     let id = req.params.id;
-
-    if (!ObjectId.isValid(id)) {
-      return res.status(404).send();
-    }
     Meetup.findByIdAndRemove(id).then((meetup) => {
       if (!meetup) {
         return res.status(404).send();

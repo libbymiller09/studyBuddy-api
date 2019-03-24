@@ -10,7 +10,15 @@ describe('Meetup routes', function() {
 
   it('should 200 on GET requests', function() {
     return chai.request(app)
-      .get('/meetups')
+      .get('/api/meetups')
+      .then(function(res) {
+        res.should.have.status(200);
+      });
+  });
+
+  it('should 200 on GET by Id requests', function() {
+    return chai.request(app)
+      .get('/api/meetups/:id')
       .then(function(res) {
         res.should.have.status(200);
       });
@@ -18,7 +26,7 @@ describe('Meetup routes', function() {
 
   it('should post a new meetup', function() {
     return chai.request(app)
-      .post('./meetups')
+      .post('/api/meetups')
       .then(function(res) {
         res.should.have.status(200);
       });
@@ -26,9 +34,9 @@ describe('Meetup routes', function() {
 
   it('should delete a meetup', function() {
     return chai.request(app)
-      .delete('./meetups')
+      .delete('/api/meetups/:id')
       .then(function(res) {
-        res.should.have.status(200);
+        res.should.have.status(400);
       });
   });
 });
