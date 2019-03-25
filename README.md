@@ -1,27 +1,32 @@
-# Study Buddy
+## Study Buddy
 
 # Summary 
 
-Study Buddy is a an app .....concise explanation of what your app does. Try to frame this from the standpoint of what the user does, or what the app enables for the user.
-ScreenShots of app go here!
+Study Buddy is a an app that allows users to connect with people to study with. The app allows users to create and find meetups in their area where students are studying together. User can login with google to create an account. From there, the user can create their own meetups to help encourage others to come and study with them! Or they can simply wait for others to create a meetup and choose to go and study.
 
 # Screen shots
 
 Landing Page - Not logged in
 
-![Landing Page not logged in](/studyBuddy-api/images/ "LoggedOutLanding.png")
+![Landing Page not logged in](https://github.com/libbymiller09/studyBuddy-api/blob/master/images/LoggedOutLanding.png?raw=true)
+* Landing Page where user can view what the app does
+* User can choose to Login with Google
 
 Landing Page - Logged in
 
-![Landing Page logged in](/studyBuddy-api/images/ "LoggedInLanding.png")
+![Landing Page logged in](https://github.com/libbymiller09/studyBuddy-api/blob/master/images/LoggedInLanding.png?raw=true)
+* Once logged in the user can see full nav bar and choose to click on the meetups page 
 
 Meetup Page - With no current entries
 
-![Meetup Page blank](/studyBuddy-api/images/ "MeetupPage.png")
+![Meetup Page blank](https://github.com/libbymiller09/studyBuddy-api/blob/master/images/MeetupPage.png?raw=true)
+* Meetup Page with the form for adding a new meetup and blank list of meetups
+* User can fill out the form to create a new meetup
 
 Meetup Page - With listed meetups
 
-![Meetup Page with list](/studyBuddy-api/images/ "MeetupList.png")
+![Meetup Page with list](https://github.com/libbymiller09/studyBuddy-api/blob/master/images/MeetupList.png?raw=true)
+* Once user has created meetups they show up on the meetups page
 
 
 # Demo
