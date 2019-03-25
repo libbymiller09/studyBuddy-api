@@ -9,11 +9,19 @@ ScreenShots of app go here!
 
 Landing Page - Not logged in
 
+![Landing Page not logged in](/studyBuddy-api/images/ "LoggedOutLanding.png")
+
 Landing Page - Logged in
+
+![Landing Page logged in](/studyBuddy-api/images/ "LoggedInLanding.png")
 
 Meetup Page - With no current entries
 
+![Meetup Page blank](/studyBuddy-api/images/ "MeetupPage.png")
+
 Meetup Page - With listed meetups
+
+![Meetup Page with list](/studyBuddy-api/images/ "MeetupList.png")
 
 
 # Demo
