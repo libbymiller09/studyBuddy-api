@@ -42,16 +42,16 @@ require('./routes/meetupRoutes')(app);
 
 // for heroku build processing
 
-// if (process.env.NODE_ENV === 'production') {
-//   // Express serve up production assets
-//   app.use(express.static('client/build'))
+if (process.env.NODE_ENV === 'production') {
+  // Express serve up production assets
+  app.use(express.static('client/build'))
 
-//   // Express serve up index.html file
-//   const path = require('path');
-//   app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-//   })
-// }
+  // Express serve up index.html file
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
+}
 
 app.get('/', (req, res) => {
   res.send('home page');
