@@ -37,7 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes')(app);
-require('./routes/mapRoutes')(app);
+// require('./routes/mapRoutes')(app);
 require('./routes/meetupRoutes')(app);
 
 // for heroku build processing
