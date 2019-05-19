@@ -6,6 +6,6 @@ deploy:
   provider: heroku
   api_key:
     secure: bMBpA/YN1q03ddsIR3wGXkQ7BB0wx93T/dPGEzjfVeiDLGAtoeYrfpVHm8FO46v6r1+LDB1wPCw5SSKx8LP4xQhg4k7WQjgRYozWi8+naBzEiyIDkQbBkwkknN6+85AzRutNudT7dNgFJVjNxlc3siLMD+1s2962UEvKCGw9jBcqX9hDlnlOxRiEIxKp5YXRy6kavac8G3KIyzO6h56D/GkLFUqGYUaofDE57o4nqh/KVsK9wxHe9FF4ZmBKctsvVJWuh2TdGyKJAWBoA9SSh0e+9SKqxKtuFhI25QNOzSlUaeEpHdX58+1hh/o+a+5HkHeA7mYeirEtcN9BXYmi1j4bkK9cA3Dnu+fBxjAtLjskKtFJfmeluKsKZTKUgziDMvcn7k1Vq8oTMXsMPPi7hiorM3tuS5EyGSdyV/pHZuBSB3qAtkMmDSqec6+zI93menuvX/m4SO3XATfPO3n1Ta6bRO/k6Ha1Q7ETILaIGDSlSeY7yu+5i5BLYqUSeyyJRg8nn5/6HsrAsIvUYOd2WfX/PpnjYIjByKaZzJdsYsHHgRwSen9NQ1Zq0Gt4nXkIHf2IrVSOGQvJnf+Y1kOAI13bu/XAug6jHqKcC+HMKBri5rm0ggB+0mlnEkUAz1dNkk9PsBhnmnW9H5x8Wub2DNqDRktthVF1KFNjkbzdVI4=
-  app: desolate-lowlands-90762
+  app: warm-atoll-66734
   on:
     repo: libbymiller09/studyBuddy
